@@ -10,7 +10,7 @@
                             Delete Contact Intro Component
                         </p>
                         <span>Title:</span>
-                        <span>@Model.Title</span>
+                        <span>@Model.Title </span>
 
                         <br />
                         <br />
@@ -23,7 +23,7 @@
                         <span>File path</span>
                         <span>@Model.FilePath</span>
 
-                        <form method="post" asp-action="deletecomponent" asp-controller="contactintro" asp-area="admin" asp-route-id="@Model.Id">
+                        <form method="post" asp-action="delete" asp-controller="contactintro" asp-area="admin" asp-route-id="@Model.Id">
                             <button onclick="confirm('Are you sure?')" class="btn btn-danger">Delete</button>
                         </form>
                     </div>

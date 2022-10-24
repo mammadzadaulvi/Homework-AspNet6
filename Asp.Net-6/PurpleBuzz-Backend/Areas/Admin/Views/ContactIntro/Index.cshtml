@@ -1,5 +1,7 @@
 ﻿@using PurpleBuzz_Backend.Areas.Admin.ViewModels
 @model ContactIntroIndexViewModel
+
+
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
@@ -15,30 +17,30 @@
                                     <tr>
                                         <th>Id</th>
                                         <th>Title</th>
-                                        <th>Description (As Html tag)</th>
+                                        <th>Description</th>
                                         <th>FilePath</th>
                                         <th colspan="3" style="text-align:center">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @{
-                                                @foreach (var contactIntroComponent in Model.ContactIntroComponents)
+                                        @foreach (var contactIntroComponent in Model.ContactIntroComponents)
                                         {
-                                                    <tr>
-                                                        <td>@contactIntroComponent.Id</td>
-                                                        <td>@contactIntroComponent.Title</td>
-                                                        <td>@contactIntroComponent.Description</td>
-                                                        <td>@contactIntroComponent.FilePath</td>
-                                                        <td>
-                                                            <a asp-action="update" asp-controller="contactintro" asp-area="admin" asp-route-id="@contactIntroComponent.Id" class="btn btn-primary">Update</a>
-                                                        </td>
-                                                        <td>
-                                                            <a asp-action="delete" asp-controller="contactintro" asp-area="admin" asp-route-id="@contactIntroComponent.Id" class="btn btn-danger">Delete</a>
-                                                        </td>
-                                                        <td>
-                                                            <a asp-action="details" asp-controller="contactintro" asp-area="admin" asp-route-id="@contactIntroComponent.Id" class="btn btn-info">Details</a>
-                                                        </td>
-                                                    </tr>
+                                            <tr>
+                                                <td>@contactIntroComponent.Id</td>
+                                                <td>@contactIntroComponent.Title</td>
+                                                <td>@contactIntroComponent.Description</td>
+                                                <td>@contactIntroComponent.FilePath</td>
+                                                <td>
+                                                    <a asp-action="update" asp-controller="contactintro" asp-area="admin" asp-route-id="@contactIntroComponent.Id" class="btn btn-primary">Update</a>
+                                                </td>
+                                                <td>
+                                                    <a asp-action="delete" asp-controller="contactintro" asp-area="admin" asp-route-id="@contactIntroComponent.Id" class="btn btn-danger">Delete</a>
+                                                </td>
+                                                <td>
+                                                    <a asp-action="details" asp-controller="contactintro" asp-area="admin" asp-route-id="@contactIntroComponent.Id" class="btn btn-info">Details</a>
+                                                </td>
+                                            </tr>
                                         }
                                     }
                                 </tbody>

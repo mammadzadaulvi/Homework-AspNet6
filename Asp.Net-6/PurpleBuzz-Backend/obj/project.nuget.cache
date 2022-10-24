@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/HRAc8fPH8Y0ai5bbtDdHEW5dFkkB+w/0mbDwMCqR8sP80QV2DP/MyHtzs5AGrAA0MbaAobanP043CcSBDjVNw==",
+  "dgSpecHash": "weU2cT05HyWS/VrW55KuKsDDGGAnSH+9BktUejSpZ+ccJPpOoEUkyT15ItHugRWmNHMQ5rxjGWx/peUP0MzGPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\Asp.Net-PartialView-main\\PurpleBuzz-Backend\\PurpleBuzz-Backend.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\Homework-AspNet6\\Asp.Net-6\\PurpleBuzz-Backend\\PurpleBuzz-Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

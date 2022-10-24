@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\Asp.Net-PartialView-main\\PurpleBuzz-Backend\\PurpleBuzz-Backend.csproj": {}
+    "C:\\Users\\user\\Desktop\\Homework-AspNet6\\Asp.Net-6\\PurpleBuzz-Backend\\PurpleBuzz-Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Asp.Net-PartialView-main\\PurpleBuzz-Backend\\PurpleBuzz-Backend.csproj": {
+    "C:\\Users\\user\\Desktop\\Homework-AspNet6\\Asp.Net-6\\PurpleBuzz-Backend\\PurpleBuzz-Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Asp.Net-PartialView-main\\PurpleBuzz-Backend\\PurpleBuzz-Backend.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Homework-AspNet6\\Asp.Net-6\\PurpleBuzz-Backend\\PurpleBuzz-Backend.csproj",
         "projectName": "PurpleBuzz-Backend",
-        "projectPath": "C:\\Users\\user\\Desktop\\Asp.Net-PartialView-main\\PurpleBuzz-Backend\\PurpleBuzz-Backend.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\Homework-AspNet6\\Asp.Net-6\\PurpleBuzz-Backend\\PurpleBuzz-Backend.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Asp.Net-PartialView-main\\PurpleBuzz-Backend\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Homework-AspNet6\\Asp.Net-6\\PurpleBuzz-Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
