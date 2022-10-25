@@ -17,5 +17,6 @@ namespace PurpleBuzz_Backend.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<CategoryComponent> CategoryComponents { get; set; }
         public DbSet<PricingComponent> PricingComponents { get; set; }
+        public DbSet<TeamMember> TeamMembers { get; set; }
     }
 }

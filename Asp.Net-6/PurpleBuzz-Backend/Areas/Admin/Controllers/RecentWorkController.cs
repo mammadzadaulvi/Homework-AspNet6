@@ -64,11 +64,8 @@ namespace PurpleBuzz_Backend.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id, RecentWorkComponent recentWorkComponent)
         {
             if (!ModelState.IsValid) return View(recentWorkComponent);
-
             if (id != recentWorkComponent.Id) return BadRequest();
-
             var dbRecentWorkComponent = await _appDbContext.RecentWorkComponents.FindAsync(id);
-
             if (dbRecentWorkComponent == null) return NotFound();
 
             bool isExist = await _appDbContext.RecentWorkComponents.AnyAsync(rcw=>rcw.Title.ToLower().Trim()==recentWorkComponent.Title.ToLower().Trim() && rcw.Id!=recentWorkComponent.Id);
@@ -113,6 +110,5 @@ namespace PurpleBuzz_Backend.Areas.Admin.Controllers
             if (recentWorkComponent == null) return NotFound();
             return View(recentWorkComponent);
         }
-
     }
 }

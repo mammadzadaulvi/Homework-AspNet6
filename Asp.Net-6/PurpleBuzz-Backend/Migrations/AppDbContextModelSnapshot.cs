@@ -188,6 +188,34 @@ namespace PurpleBuzz_Backend.Migrations
                     b.ToTable("RecentWorkComponents");
                 });
 
+            modelBuilder.Entity("PurpleBuzz_Backend.Models.TeamMember", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoPath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Position")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("TeamMembers");
+                });
+
             modelBuilder.Entity("PurpleBuzz_Backend.Models.CategoryComponent", b =>
                 {
                     b.HasOne("PurpleBuzz_Backend.Models.Category", "Category")
