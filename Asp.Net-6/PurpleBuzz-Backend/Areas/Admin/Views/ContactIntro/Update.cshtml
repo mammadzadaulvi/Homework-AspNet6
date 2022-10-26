@@ -1,5 +1,7 @@
-﻿@using PurpleBuzz_Backend.Models
-@model ContactIntroComponent
+﻿@using PurpleBuzz_Backend.Areas.Admin.ViewModels.ContactIntro
+@model ContactIndexUpdateViewModel
+ 
+
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
@@ -22,9 +24,9 @@
 
                                 <br/>
 
-                                <label asp-for="FilePath">FilePath</label>
-                                <input class="form-control" asp-for="FilePath">
-                                <span class="text-danger" asp-validation-for="FilePath"></span>
+                                <label asp-for="PhotoPath">FilePath</label>
+                                <input class="form-control" asp-for="PhotoPath">
+                                <span class="text-danger" asp-validation-for="PhotoPath"></span>
                             </div>
                             <button type="submit" class="btn btn-primary me-2">Submit</button>
                         </form>

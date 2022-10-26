@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PurpleBuzz_Backend.Models
 {
@@ -13,6 +14,10 @@ namespace PurpleBuzz_Backend.Models
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Filepath can't be null")]
-        public string FilePath { get; set; }
+        public string? FilePath { get; set; }
+
+        [NotMapped]
+        [Required]
+        public IFormFile Photo { get; set; }
     }
 }

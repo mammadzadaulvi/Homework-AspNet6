@@ -4,6 +4,6 @@ namespace PurpleBuzz_Backend.Areas.Admin.ViewModels
 {
     public class TeamMemberIndexViewModel
     {
-        public List<TeamMember> TeamMembers { get; set; }
+        public List<Models.TeamMember> TeamMembers { get; set; }
     }
 }
