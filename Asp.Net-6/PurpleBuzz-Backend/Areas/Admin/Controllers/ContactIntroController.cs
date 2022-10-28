@@ -44,6 +44,7 @@ namespace PurpleBuzz_Backend.Areas.Admin.Controllers
         public async Task<IActionResult> Create(ContactIntroComponent contactIntroComponent)
         {
             if (!ModelState.IsValid) return View(contactIntroComponent);
+
             if (!_fileService.IsImage(contactIntroComponent.Photo))
             {
                 ModelState.AddModelError("Photo", "The image must be img format");
@@ -58,7 +59,6 @@ namespace PurpleBuzz_Backend.Areas.Admin.Controllers
             contactIntroComponent.FilePath = await _fileService.UploadAsync(contactIntroComponent.Photo, _webHostEnvironment.WebRootPath);
             await _appDbContext.ContactIntroComponent.AddAsync(contactIntroComponent);
             await _appDbContext.SaveChangesAsync();
-
             return RedirectToAction("Index");
         }
         #endregion
@@ -72,18 +72,19 @@ namespace PurpleBuzz_Backend.Areas.Admin.Controllers
             var contactIntroComponent = await _appDbContext.ContactIntroComponent.FindAsync(id);
             if (contactIntroComponent == null) return NotFound();
 
-            var model = new ContactIndexUpdateViewModel
+            var model = new ContactIntroUpdateViewModel
             {
                 Id = contactIntroComponent.Id,
                 Title = contactIntroComponent.Title,
                 Description = contactIntroComponent.Description,
+                //Text1 = contactIntroComponent.Text1,
                 PhotoPath = contactIntroComponent.FilePath
             };
             return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Update(int id, ContactIndexUpdateViewModel contactIndexUpdateView)
+        public async Task<IActionResult> Update(int id, ContactIntroUpdateViewModel contactIndexUpdateView)
         {
             if (!ModelState.IsValid) return View(contactIndexUpdateView);
             if (id != contactIndexUpdateView.Id) return BadRequest();
@@ -96,14 +97,14 @@ namespace PurpleBuzz_Backend.Areas.Admin.Controllers
 
             if (!_fileService.IsImage(contactIndexUpdateView.Photo))
             {
-                ModelState.AddModelError("Photo", "Yüklənən fayl image formatında olmalıdır.");
+                ModelState.AddModelError("Photo", "The image must be img format");
                 return View(contactIndexUpdateView);
             }
 
-            int maxSize = 100;
-            if (!_fileService.checkSize(contactIndexUpdateView.Photo, maxSize))
+
+            if (!_fileService.checkSize(contactIndexUpdateView.Photo, 1000))
             {
-                ModelState.AddModelError("Photo", $"Şəkilin ölçüsü {maxSize} kb-dan böyükdür");
+                ModelState.AddModelError("Photo", $"Şəkilin ölçüsü 1000 kb-dan böyükdür");
                 return View(contactIndexUpdateView);
             }
             if (contactIndexUpdateView.Photo != null)
@@ -116,6 +117,9 @@ namespace PurpleBuzz_Backend.Areas.Admin.Controllers
             await _appDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
+
+
+
         #endregion
 
 

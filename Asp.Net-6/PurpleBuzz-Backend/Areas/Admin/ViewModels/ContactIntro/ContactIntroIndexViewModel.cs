@@ -1,5 +1,5 @@
 ﻿using PurpleBuzz_Backend.Models;
-namespace PurpleBuzz_Backend.Areas.Admin.ViewModels
+namespace PurpleBuzz_Backend.Areas.Admin.ViewModels.ContactIntro
 {
     public class ContactIntroIndexViewModel
     {
