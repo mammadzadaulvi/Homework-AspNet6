@@ -5,6 +5,6 @@
         Task<string> UploadAsync(IFormFile file, string webRootPath);
         void Delete(string fileName, string webRootPath);
         bool IsImage(IFormFile formFile);
-        bool checkSize(IFormFile formFile, int maxSize);
+        bool CheckSize(IFormFile formFile, int maxSize);
     }
 }
